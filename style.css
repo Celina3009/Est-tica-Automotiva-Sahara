@@ -64,13 +64,13 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 50px;
   margin-top: 30px;
 }
 
 .service-box {
   background: #222;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 15px;
   width: 140px;
   font-size: 14px;
