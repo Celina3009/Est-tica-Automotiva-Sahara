@@ -20,6 +20,9 @@ header {
   background-color: #000;
 }
 
+    .contato img{
+        height: 300px;
+    }
 nav {
   display: flex;
   justify-content: space-between;
