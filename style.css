@@ -1,100 +1,379 @@
 /* === RESET & BASE === */
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #000;
-  color: #fff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Changed to Roboto for a similar look */
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
 }
 
 a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 header, section {
-  padding: 40px 20px;
-  text-align: center;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative; /* Added for positioning background elements */
 }
 
 header {
-  background-color: #000;
+    background-color: #000;
 }
-.contato img{
-        height: 700px;
-
-    }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 10px;
-  gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* Adjusted padding */
+    gap: 15px;
 }
 
 .logo img {
-  height: 200px;
+    height: 100px; /* Adjusted height for better fit */
+    object-fit: contain; /* Ensures the image fits without distortion */
 }
 
 .nav-links {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .btn {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 5px 15px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 20px; /* Adjusted padding */
+    border-radius: 20px; /* More rounded */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.red-bg {
-  background-color: #b30000;
+.btn:hover {
+    background-color: #eee;
+}
+
+/* Specific styling for the top right buttons */
+.nav-links .btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.nav-links .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .section-title {
-  font-size: 28px;
-  font-weight: bold;
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase as in the image */
+}
+
+/* Welcome Section Styling */
+.welcome-section {
+    background-color: #000;
+    padding-top: 0; /* Remove top padding for the image to go to the top */
+    padding-bottom: 0;
+    overflow: hidden; /* Hide overflow from images */
+    position: relative;
+    height: 600px; /* Fixed height to control image placement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red-bg-top {
+    background: linear-gradient(to top, #000 50%, #b30000 50%); /* Split background */
+    background-size: 100% 200%;
+    background-position: bottom;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2; /* Ensure text is above images */
+    padding-top: 150px; /* Adjust to move text down */
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.welcome-content h1 {
+    margin-bottom: 10px;
+    font-size: 3em; /* Even larger for "SEJA BEM-VINDO!" */
+}
+
+.welcome-content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.background-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.car-image {
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Align to the bottom of the section */
+    width: 50%; /* Adjust size */
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.moto-image {
+    position: absolute;
+    right: 0;
+    bottom: 0; /* Align to the bottom of the section */
+    width: 50%; /* Adjust size */
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* What we offer section */
+.what-we-offer {
+    background-color: #000;
+    padding-top: 60px;
 }
 
 .services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Smaller gap */
+    margin-top: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-box {
-  background: #222;
-  border-radius: 20px;
-  padding: 15px;
-  width: 140px;
-  font-size: 14px;
+    background: #222;
+    border-radius: 10px; /* Slightly less rounded */
+    padding: 15px;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 150px; /* Fixed height for uniformity */
 }
 
-.products img {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  display: block;
+.service-box img {
+    width: 70px; /* Icon size */
+    height: 70px; /* Icon size */
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
-.products p {
-  max-width: 600px;
-  margin: 0 auto;
+.service-box span {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Quality Products Section */
+.quality-products {
+    background-color: #000;
+    padding-top: 60px;
+}
+
+.products-content {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.products-image {
+    width: 100%;
+    max-width: 700px; /* Adjust size */
+    height: auto;
+    object-fit: contain;
+}
+
+.quality-products p {
+    font-size: 1.1em;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: #000;
+    padding-top: 60px;
+    padding-bottom: 80px; /* More space at the bottom */
 }
 
 .contact-info {
-  margin-top: 20px;
-  font-size: 16px;
-  line-height: 1.8;
+    margin-top: 30px;
+    font-size: 1.2em;
+    line-height: 2.0; /* Increased line height */
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Align text to left within its container */
 }
 
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icon and text */
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    font-size: 1.5em; /* Larger icons */
+    color: #b30000; /* Red color for icons */
+}
+
+/* Footer Styling */
 footer {
-  text-align: center;
-  padding: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+.back-to-top {
+    background-color: #b30000; /* Red background for "Início" button */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #8c0000;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .products-content {
+        flex-direction: row; /* Side-by-side on larger screens */
+        justify-content: center;
+        align-items: center;
+    }
+    .products-image {
+        width: 50%;
+    }
+    .quality-products p {
+        width: 40%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 6px 15px;
+        font-size: 0.9em;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .welcome-content h1 {
+        font-size: 2.5em;
+    }
+
+    .welcome-content p {
+        font-size: 1em;
+    }
+
+    .car-image, .moto-image {
+        width: 60%; /* Slightly larger on smaller screens */
+    }
+
+    .services {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust for smaller screens */
+        gap: 15px;
+    }
+
+    .service-box {
+        height: 120px;
+        padding: 10px;
+    }
+
+    .service-box img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-info {
+        font-size: 1em;
+        text-align: center; /* Center text on smaller screens */
+    }
+    .contact-info p {
+        justify-content: center; /* Center icons and text */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .welcome-section {
+        height: 450px; /* Reduce height further for small mobiles */
+    }
+
+    .welcome-content h1 {
+        font-size: 2em;
+    }
+
+    .welcome-content p {
+        font-size: 0.9em;
+    }
+
+    .car-image, .moto-image {
+        width: 70%; /* Adjust for very small screens */
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
+        gap: 10px;
+    }
+
+    .service-box {
+        height: 100px;
+        font-size: 0.8em;
+    }
+
+    .service-box img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-info {
+        font-size: 0.9em;
+    }
 }
