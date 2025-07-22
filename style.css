@@ -20,21 +20,20 @@ header {
   background-color: #000;
 }
 .contato img{
-        height: 900px;}
+        height: 700px;
+
+    }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   gap: 15px;
 }
 
 .logo img {
   height: 200px;
-}
-.inicio{
-    font-size: 30px;
 }
 
 .nav-links {
