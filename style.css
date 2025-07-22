@@ -58,6 +58,7 @@ nav a:hover {
   top: 20px;
   left: 20px;
   height: 60px;
+  z-index: 20;
 }
 
 /* === TRIÂNGULOS === */
@@ -117,14 +118,18 @@ nav a:hover {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  z-index: 5;
 }
 
 .services .highlight-box {
   font-size: 24px;
   margin-bottom: 40px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: 2px solid white;
+  display: inline-block;
+  background-color: black;
 }
 
 .services-list {
@@ -133,19 +138,23 @@ nav a:hover {
   grid-template-rows: repeat(2, auto);
   gap: 20px;
   justify-items: center;
-  padding: 0 10px;
-  width: 100%;
-  max-width: 1000px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .service {
   background: #111;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   border: 2px solid white;
-  width: 140px;
+  width: 160px;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .service img {
@@ -209,6 +218,7 @@ nav a:hover {
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
+  z-index: 10;
 }
 
 
