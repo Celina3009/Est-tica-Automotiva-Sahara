@@ -28,7 +28,7 @@ nav {
 }
 
 .logo img {
-  height: 100px;
+  height: 200px;
 }
 
 .nav-links {
@@ -60,7 +60,8 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 30px;
+  max-width: 750px; /* 5 itens de 140px + gaps */
+  margin: 30px auto 0;
 }
 
 .service-box {
@@ -69,7 +70,9 @@ nav {
   padding: 15px;
   width: 140px;
   font-size: 14px;
+  text-align: center;
 }
+
 
 .products img {
   width: 100%;
