@@ -20,7 +20,7 @@ header {
   background-color: #000;
 }
 .contato img{
-        height: 600px;}
+        height: 900px;}
 
 nav {
   display: flex;
@@ -31,7 +31,7 @@ nav {
 }
 
 .logo img {
-  height: 300px;
+  height: 200px;
 }
 
 .nav-links {
